@@ -29,10 +29,10 @@ const GlobalStyle = createGlobalStyle`
     --color-secondary: '';
     --color-tertiary: '';
 
-    --screen-xs: '575px';
-    --screen-sm: '767px';
-    --screen-md: '991px';
-    --screen-lg: '1199px';
+    --screen-xs: 575px;
+    --screen-sm: 767px;
+    --screen-md: 991px;
+    --screen-lg: 1199px;
   }
 
   @import url('https://fonts.googleapis.com/css?family=Work+Sans:300|Montserrat:400,600');
