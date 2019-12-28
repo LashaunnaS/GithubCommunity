@@ -7,12 +7,21 @@ const Form = styled.form`
   align-content: end;
 
   width: 70vw;
-  height: 20vh;
+  height: 15rem;
 
   border-color: var(--color-black-light);
   box-shadow: 1px 5px 15px #564f62;
 
   padding: 4rem 6rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 2fr;
+    padding: 2.5rem 6rem;
+  }
+
+  @media (max-width: 575px) {
+    width: auto;
+  }
 `;
 
 export default Form;
