@@ -13,20 +13,19 @@ const GlobalStyle = createGlobalStyle`
     --font-size-xlarge: 4.8rem;
      
 
-     --line-height-small: line-height: 30px;
-     --line-height-regular: line-height: 32px;
-     --line-height-large: line-height: 40px;
-     --line-height-larger: line-height: 48px;
-     --line-height-xlarge: line-height: 56px;
+    --line-height-small: line-height: 30px;
+    --line-height-regular: line-height: 32px;
+    --line-height-large: line-height: 40px;
+    --line-height-larger: line-height: 48px;
+    --line-height-xlarge: line-height: 56px;
 
-    --color-white-regular: '#FFFFFF';
-    --color-white-dark: '#FFFFFF';
+    --color-white-regular: #FFFFFF;
 
-    --color-black-regular: '#252525';
-    --color-black-light: '#564F62';
-    --color-black-lighter: '#ABA8AF';
+    --color-black-regular: #252525;
+    --color-black-light: #564F62;
+    --color-black-lighter: #ABA8AF;
 
-    --color-primary: '#c52233';
+    --bg-color-primary: #ff7575;
     --color-secondary: '';
     --color-tertiary: '';
 
@@ -40,6 +39,8 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   html {

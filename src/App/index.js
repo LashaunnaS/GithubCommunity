@@ -5,9 +5,10 @@ import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import GlobalStyle from 'shared/styles/GlobalStyle';
-
+import Title from 'shared/components/Title';
 import Layout from 'shared/components/Layout';
-import Form from '../Form';
+
+import FormContainer from '../FormContainer';
 
 const GITHUB_BASE_URL = 'https://api.github.com/graphql';
 const httpLink = new HttpLink({
@@ -25,8 +26,8 @@ const client = new ApolloClient({
 const App = () => (
   <ApolloProvider client={client}>
     <Layout>
-      <h1>Github Community</h1>
-      <Form />
+      <Title>Github Community</Title>
+      <FormContainer />
     </Layout>
     <GlobalStyle />
   </ApolloProvider>

@@ -4,8 +4,9 @@ const Layout = styled.main`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 3rem;
 `;
 
 export default Layout;
