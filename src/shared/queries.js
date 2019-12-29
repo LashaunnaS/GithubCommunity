@@ -11,7 +11,7 @@ const GET_CURRENT_USER_DATA = gql`
       followers {
         totalCount
       }
-      repositories(last: 5) {
+      repositories(last: 4) {
         nodes {
           description
           name
