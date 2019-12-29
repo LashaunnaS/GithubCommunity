@@ -1,18 +1,27 @@
 import gql from 'graphql-tag';
 
-const GET_CURRENT_USER = gql`
-  query getUser($username: String!) {
+const GET_CURRENT_USER_DATA = gql`
+  query getUserData($username: String!) {
     user(login: $username) {
       name
+      avatarUrl
+      bio
       email
-      repositories(first: 100) {
+      websiteUrl
+      followers {
+        totalCount
+      }
+      repositories(last: 3) {
+        totalCount
         nodes {
+          description
           name
-          id
+          url
+          createdAt
         }
       }
     }
   }
 `;
 
-export default GET_CURRENT_USER;
+export default GET_CURRENT_USER_DATA;
