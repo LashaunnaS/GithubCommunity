@@ -9,7 +9,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import UserData from 'App/components/UserData';
 import FormContainer from 'App/components/Form';
 
-import Layout from 'shared/styledComponents/LayoutStyles';
+import AppLayout from 'shared/styledComponents/AppLayoutStyles';
 import Title from 'shared/styledComponents/TitleStyles';
 
 import GlobalStyle from 'shared/styles/GlobalStyle';
@@ -31,7 +31,7 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <Layout>
+    <AppLayout>
       {/* add browserrouter, switch, and single route */}
       {/* should render UserData at path '/:username' */}
       <Title>Github Community</Title>
@@ -39,14 +39,14 @@ const App = () => (
         <FormContainer />
         <Switch>
           <Route exact path="/">
-            <p>Who Are You Looking For?</p>
+            <p style={{ marginTop: '3rem' }}>Who Are You Looking For?</p>
           </Route>
           <Route exact path="/:username">
             <UserData />
           </Route>
         </Switch>
       </BrowserRouter>
-    </Layout>
+    </AppLayout>
     <GlobalStyle />
   </ApolloProvider>
 );

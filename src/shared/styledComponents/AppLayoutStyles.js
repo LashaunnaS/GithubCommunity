@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Layout = styled.main`
+const AppLayout = styled.main`
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,4 +9,4 @@ const Layout = styled.main`
   padding: 3rem;
 `;
 
-export default Layout;
+export default AppLayout;
