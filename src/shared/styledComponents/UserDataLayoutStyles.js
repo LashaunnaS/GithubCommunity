@@ -7,7 +7,7 @@ const UserDataLayout = styled.section`
   grid-gap: 1rem;
 
   border: 2px solid #9c9c9d4f;
-  height: 100vh;
+  height: 100;
   width: 60vw;
   padding: 3rem 1rem;
   border-top: none;

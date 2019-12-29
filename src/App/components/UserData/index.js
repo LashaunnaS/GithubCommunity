@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 
 import {
+  Repo,
+  RepoHeader,
   UserBio,
   UserImg,
   UserTitle,
@@ -61,12 +63,20 @@ const UserData = () => {
       </UserBio>
       <UserImg src={data.user.avatarUrl} alt={data.user.name} />
       <UserRepos>
-        hkssuhgkhg fskhgsghlgh gkhglighlwigjlgijlg glwughsgihg gwgjhwlihgwhg
-        flwhglfqh wgighlfihwlgih glwighlghwlighw glwighlwihgwg gpihgiwhglihg
-        ghgihllg e ehgllhgjehg wgighlfihwlgih glwighlghwlighw glwighlwihgwg
-        gpihgiwhglihg ghgihllg e ehgllhgjehg liheglsejhgw ghlgiwheg;ahgweg
-        liheglsejhgw ghlgiwheg;ahgweg hlaighlaehg hffghklsg dhfksgljhnhljghee
-        fkuehlwwjlhfwg
+        <h2>Latest Repos✨</h2>
+        {data.user.repositories.nodes.map(repo => {
+          const date = new Date(repo.createdAt).toLocaleDateString();
+
+          return (
+            <Repo key={repo.createdAt}>
+              <RepoHeader>
+                <a href={repo.url}>{repo.name}</a>
+                {date}
+              </RepoHeader>
+              <p>{repo.description}...</p>
+            </Repo>
+          );
+        })}
       </UserRepos>
     </UserDataLayout>
   );

@@ -26,7 +26,19 @@ export const UserImg = styled.img`
   border-radius: 50%;
 `;
 
-export const UserRepos = styled.p`
+export const UserRepos = styled.div`
   grid-column: 2/4;
   grid-row: 2/3;
+`;
+
+export const Repo = styled.div`
+  padding-bottom: 2rem;
+`;
+
+export const RepoHeader = styled.p`
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
 `;
