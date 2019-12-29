@@ -31,7 +31,7 @@ const UserData = () => {
       </p>
     );
   }
-  console.log(data);
+
   return (
     <UserDataLayout>
       <UserTitle>{data.user.name}</UserTitle>
@@ -63,8 +63,8 @@ const UserData = () => {
       </UserBio>
       <UserImg src={data.user.avatarUrl} alt={data.user.name} />
       <UserRepos>
-        <h2>Latest Repos✨</h2>
-        {data.user.repositories.nodes.map(repo => {
+        <h2 style={{ paddingBottom: '2rem' }}>Latest Repos✨</h2>
+        {data.user.repositories.nodes.reverse().map(repo => {
           const date = new Date(repo.createdAt).toLocaleDateString();
 
           return (
