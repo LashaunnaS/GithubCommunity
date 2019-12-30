@@ -11,11 +11,11 @@ const FormContainer = () => {
   const [isRedirecting, setIsRedirecting] = useState(false);
   const [username, setUsername] = useState('');
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setInputName(event.target.value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     setUsername(inputName);
     // set redirect true

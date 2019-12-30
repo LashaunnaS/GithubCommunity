@@ -12,6 +12,8 @@ import {
   UserRepos,
 } from 'App/components/UserData/UserDataStyles';
 
+import urlMatcher from 'shared/helper/urlMatcher';
+
 import UserDataLayout from 'shared/styledComponents/UserDataLayoutStyles';
 
 import GET_CURRENT_USER_DATA from 'shared/queries';
@@ -36,16 +38,20 @@ const UserData = () => {
     <UserDataLayout>
       <UserTitle>{data.user.name}</UserTitle>
       <UserBio>
-        <p>
-          <small>MAIL</small>
-          <br />
-          <a href={`mailto:${data.user.email}`}>{data.user.email}</a>
-        </p>
+        {data.user.email && (
+          <p>
+            <small>MAIL</small>
+            <br />
+            <a href={`mailto:${data.user.email}`}>{data.user.email}</a>
+          </p>
+        )}
         {data.user.websiteUrl && (
           <p>
             <small>WEBSITE</small>
             <br />
-            <a href={data.user.websiteUrl}>{data.user.websiteUrl}</a>
+            <a href={urlMatcher(data.user.websiteUrl)}>
+              {data.user.websiteUrl}
+            </a>
           </p>
         )}
         <p>
@@ -64,7 +70,7 @@ const UserData = () => {
       <UserImg src={data.user.avatarUrl} alt={data.user.name} />
       <UserRepos>
         <h2 style={{ paddingBottom: '2rem' }}>Latest Repos✨</h2>
-        {data.user.repositories.nodes.reverse().map(repo => {
+        {data.user.repositories.nodes.reverse().map((repo) => {
           const date = new Date(repo.createdAt).toLocaleDateString();
 
           return (
