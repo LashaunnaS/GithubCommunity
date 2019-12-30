@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 import {
   Repo,
+  RepoDesc,
   RepoHeader,
   UserBio,
   UserImg,
@@ -69,8 +70,8 @@ const UserData = () => {
       </UserBio>
       <UserImg src={data.user.avatarUrl} alt={data.user.name} />
       <UserRepos>
-        <h2 style={{ paddingBottom: '2rem' }}>Latest Repos✨</h2>
-        {data.user.repositories.nodes.reverse().map((repo) => {
+        <h2 style={{ margin: '2rem 0' }}>Latest Repos✨</h2>
+        {data.user.repositories.nodes.reverse().map(repo => {
           const date = new Date(repo.createdAt).toLocaleDateString();
 
           return (
@@ -79,7 +80,7 @@ const UserData = () => {
                 <a href={repo.url}>{repo.name}</a>
                 {date}
               </RepoHeader>
-              <p>{repo.description}...</p>
+              <RepoDesc>{repo.description}...</RepoDesc>
             </Repo>
           );
         })}

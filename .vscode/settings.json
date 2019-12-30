@@ -8,7 +8,6 @@
     "typescript.format.enable": false,
     "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
     "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
-    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
     "javascript.format.insertSpaceAfterCommaDelimiter": false,
     "javascript.format.enable": false,
     "json.format.enable": false,
@@ -19,5 +18,8 @@
     "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "prettier.arrowParens": "always"
 }

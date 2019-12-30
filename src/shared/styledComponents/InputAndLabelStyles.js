@@ -11,10 +11,6 @@ export const Input = styled.input`
     width: 100%;
     margin: 0.5rem 0 1rem;
   }
-
-  /* @media (max-width: 575px) {
-    width: auto;
-  } */
 `;
 
 export const Label = styled.label`
@@ -24,8 +20,4 @@ export const Label = styled.label`
     width: 100%;
     justify-self: right;
   }
-
-  /* @media (max-width: 575px) {
-    width: auto;
-  } */
 `;

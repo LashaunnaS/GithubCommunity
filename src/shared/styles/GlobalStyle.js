@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     --font-primary: 'Work Sans', sans-serif;
     --font-secondary: 'Montserrat', serif;
 
+    --font-size-smaller: 1.5rem;
     --font-size-small: 1.8rem;
     --font-size-regular: 2.4rem;
     --font-size-large: 3.0rem;
@@ -13,11 +14,12 @@ const GlobalStyle = createGlobalStyle`
     --font-size-xlarge: 4.8rem;
      
 
-    --line-height-small: line-height: 30px;
-    --line-height-regular: line-height: 32px;
-    --line-height-large: line-height: 40px;
-    --line-height-larger: line-height: 48px;
-    --line-height-xlarge: line-height: 56px;
+    --line-height-smaller: 20px;
+    --line-height-small: 30px;
+    --line-height-regular: 32px;
+    --line-height-large: 40px;
+    --line-height-larger: 48px;
+    --line-height-xlarge: 56px;
 
     --color-white-regular: #FFFFFF;
 
